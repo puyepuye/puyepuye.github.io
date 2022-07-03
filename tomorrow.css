@@ -1,0 +1,34 @@
+h1 {
+    text-align: center;
+}
+
+p {
+    text-align: center;
+}
+
+div {
+    text-align: center;
+}
+
+.container {
+    margin: 0;
+    position: relative;
+    top: 50%;
+
+}
+
+#title {
+    font-size: 36px;
+}
+
+#show {
+    display: none
+}
+
+#main:hover+#show {
+    display: block
+}
+
+#main:hover~#hide {
+    display: none
+}
