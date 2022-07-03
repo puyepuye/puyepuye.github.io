@@ -1,58 +1,20 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-    <style>
-        h1 {
-            text-align: center;
-        }
+<link rel="stylesheet" href="tomorrow.css">
 
-        p {
-            text-align: center;
-        }
-
-        div {
-            text-align: center;
-        }
-
-        .container {
-            margin: 0;
-            position: relative;
-            top: 50%;
-
-        }
-
-        #title {
-            font-size: 36px;
-        }
-
-        #show {
-            display: none
-        }
-
-        #main:hover+#show {
-            display: block
-        }
-
-        #main:hover~#hide {
-            display: none
-        }
-    </style>
-    <script>
-        const today = new Date()
-        const tomorrow = new Date(today)
-        tomorrow.setDate(tomorrow.getDate() + 1)
-        document.getElementById("tomorrow").innerHTML = tomorrow;
-    </script>
 </head>
-
 <body>
-    <div class="container">
-        <div id="title">wai tum poong nee na</div>
-        <div id="main">Hover for Details.</div>
-        <div id="show">ไว้ทำพรุ่งนี้นะ</div>
-        <div id="hide">Coming 04-July-2022</div>
-    </div>
+<div class="container">
+<div id="title">wai tum poong nee na</div>
+<div id="main">Hover for Details.</div>
+<div id="show">ไว้ทำพรุ่งนี้นะ</div>
+<div id="hide">
+ <?php
+ date_default_timezone_set('Asia/Bangkok');
+ echo "Coming on " .   date("d-m-", strtotime("+1 day")) . "<br>";
+ ?>
+</div>
+</div>
 </body>
-
 </html>
