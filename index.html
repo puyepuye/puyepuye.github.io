@@ -2,59 +2,58 @@
 <html>
 
 <head>
-    <style>
-        h1 {
-            text-align: center;
-        }
-
-        p {
-            text-align: center;
-        }
-
-        div {
-            text-align: center;
-        }
-
-        .container {
-            margin: 0;
-            position: relative;
-            top: 50%;
-
-        }
-
-        #title {
-            font-size: 36px;
-        }
-
-        #show {
-            display: none
-        }
-
-        #main:hover+#show {
-            display: block
-        }
-
-        #main:hover~#hide {
-            display: none
-        }
-    </style>
+    <link rel="stylesheet" href="tomorrow.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
 </head>
 
 <body>
     <div class="container">
-        <div id="title">wai tum poong nee na</div>
-        <div id="main">Hover for Details.</div>
-        <div id="show">ไว้ทำพรุ่งนี้นะ</div>
+        <div id="title">//TODO: To be developed tomorrow</div>
+        <pre>
+                                                                                                                                                                                                                                                             
+  ,----..                     ____                                   
+  /   /   \                  ,'  , `.  ,--,                           
+ |   :     :  ,---.       ,-+-,.' _ |,--.'|         ,---,             
+ .   |  ;. / '   ,'\   ,-+-. ;   , |||  |,      ,-+-. /  |  ,----._,. 
+ .   ; /--` /   /   | ,--.'|'   |  ||`--'_     ,--.'|'   | /   /  ' / 
+ ;   | ;   .   ; ,. :|   |  ,', |  |,,' ,'|   |   |  ,"' ||   :     | 
+ |   : |   '   | |: :|   | /  | |--' '  | |   |   | /  | ||   | .\  . 
+ .   | '___'   | .; :|   : |  | ,    |  | :   |   | |  | |.   ; ';  | 
+ '   ; : .'|   :    ||   : |  |/     '  : |__ |   | |  |/ '   .   . | 
+ '   | '/  :\   \  / |   | |`-'      |  | '.'||   | |--'   `---`-'| | 
+ |   :    /  `----'  |   ;/          ;  :    ;|   |/       .'__/\_: | 
+  \   \ .'           '---'           |  ,   / '---'        |   :    : 
+   `---`                              ---`-'                \   \  /  
+                                                             `--`-'   
+    </pre>
+    <pre>
+                                                                   
+        .--.--.                                    
+    /  /    '.                                  
+    |  :  /`. /    ,---.     ,---.        ,---,  
+    ;  |  |--`    '   ,'\   '   ,'\   ,-+-. /  | 
+    |  :  ;_     /   /   | /   /   | ,--.'|'   | 
+    \  \    `. .   ; ,. :.   ; ,. :|   |  ,"' | 
+        `----.   \'   | |: :'   | |: :|   | /  | | 
+        __ \  \  |'   | .; :'   | .; :|   | |  | | 
+    /  /`--'  /|   :    ||   :    ||   | |  |/  
+    '--'.     /  \   \  /  \   \  / |   | |--'   
+        `--'---'    `----'    `----'  |   |/       
+                                    '---'                                          
+    </pre>
+
+    <div id="main"><p>Hover Here for Details.</p></div>
+        <div id="show"><p>ไว้ทำพรุ่งนี้นะ - Planned to be completed "soon" since 04-July-2022 </p></div>
         <div id="hide">Coming 04-July-2022</div>
     </div>
+    <div class="info-button">
+    <button id="info-btn">i</button>
+    <div id="tooltip" class="tooltip">
+        🏆 <a href="https://stupid.hackathon.in.th/6/#later">Hackathon</a>  Winning Project
+    </div>
+</div>
 </body>
 <!--edited-->
-<script>
-    const today = new Date()
-    const tomorrow = new Date(today)
-    tomorrow.setDate(tomorrow.getDate() + 1)
-    // TODO: prettify tomorrow
-    document.getElementById("hide").innerHTML = tomorrow.toISOString().split("T")[0].split("-").reverse().map((x,i) => i == 1 ? ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'][parseInt(x)-1] : x).join(" ");
-</script>
-
+<script src="tomorrow.js"></script>
 </html>
