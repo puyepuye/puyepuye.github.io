@@ -1,20 +1,15 @@
-<!DOCTYPE html>
-<html>
-<head>
-<link rel="stylesheet" href="tomorrow.css">
+<?php
+// Calculate tomorrow's date
+$today = new DateTime();
+$tomorrow = $today->modify('+1 day');
 
-</head>
-<body>
-<div class="container">
-<div id="title">wai tum poong nee na</div>
-<div id="main">Hover for Details.</div>
-<div id="show">ไว้ทำพรุ่งนี้นะ</div>
-<div id="hide">
- <?php
- date_default_timezone_set('Asia/Bangkok');
- echo "Coming on " .   date("d-m-", strtotime("+1 day")) . "<br>";
- ?>
-</div>
-</div>
-</body>
-</html>
+// Format the date in the desired format
+$formattedDate = $tomorrow->format('d') . ' ' . $tomorrow->format('F') . ' ' . $tomorrow->format('Y');
+
+// Output the date
+echo $formattedDate;
+
+//TODO: Actually Make it work, maybe tomorrow I will.
+?>
+
+

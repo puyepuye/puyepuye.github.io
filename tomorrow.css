@@ -1,34 +1,97 @@
 h1 {
-    text-align: center;
+  text-align: center;
 }
 
 p {
-    text-align: center;
+  text-align: center;
 }
 
 div {
-    text-align: center;
+  text-align: center;
+}
+
+body {
+  display: flex; /* Enable flexbox */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  height: 100vh; /* Full viewport height for centering */
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+  background-color: #f9f9f9; /* Optional background */
 }
 
 .container {
-    margin: 0;
-    position: relative;
-    top: 50%;
-
+  text-align: center; /* Ensure content inside the container is centered */
+  width: 100%; /* Ensure proper scaling on smaller screens */
+  max-width: 600px; /* Limit the width of the container */
+  padding: 20px; /* Add some padding inside the container */
+  box-sizing: border-box; /* Include padding in the width */
 }
 
 #title {
-    font-size: 36px;
+  font-size: 36px;
 }
 
 #show {
-    display: none
+  display: none;
 }
 
-#main:hover+#show {
-    display: block
+#main:hover + #show {
+  display: block;
 }
 
-#main:hover~#hide {
-    display: none
+#main:hover ~ #hide {
+  display: none;
+}
+
+.info-button {
+  position: fixed;
+  bottom: 20px; /* 20px from the bottom */
+  right: 20px; /* 20px from the right */
+  z-index: 1000; /* Ensure it's above other elements */
+}
+
+.info-button button {
+  background-color: white;
+  color: black;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 24px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.tooltip {
+  display: none; /* Hidden by default */
+  position: absolute;
+  bottom: 60px; /* Position above the button */
+  right: 0;
+  background-color: white; /* Dark background */
+  color: black; /* White text */
+  padding: 10px;
+  border-radius: 5px;
+  border-color: black;
+  font-size: 14px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Add shadow */
+  white-space: nowrap; /* Prevent text from wrapping */
+}
+
+@media (max-width: 600px) {
+  .info-button {
+    bottom: 10px;
+    right: 10px;
+  }
+
+  .info-button button {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+  }
+
+  .tooltip {
+    font-size: 12px;
+    padding: 8px;
+  }
 }
