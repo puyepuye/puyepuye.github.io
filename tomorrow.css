@@ -11,19 +11,19 @@ div {
 }
 
 body {
-  display: flex; /* Enable flexbox */
-  justify-content: center; /* Center horizontally */
-  align-items: center; /* Center vertically */
-  height: 100vh; /* Full viewport height for centering */
-  margin: 0; /* Remove default margin */
-  padding: 0; /* Remove default padding */
-  background-color: #f9f9f9; /* Optional background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-family: "Cascadia Code", monospace;
 }
 
 .container {
   text-align: center; /* Ensure content inside the container is centered */
   width: 100%; /* Ensure proper scaling on smaller screens */
-  max-width: 600px; /* Limit the width of the container */
+  max-width: 800px; /* Limit the width of the container */
   padding: 20px; /* Add some padding inside the container */
   box-sizing: border-box; /* Include padding in the width */
 }
@@ -54,11 +54,12 @@ body {
 .info-button button {
   background-color: white;
   color: black;
-  border: none;
+  border: 10px;
   border-radius: 50%;
-  width: 50px;
-  height: 50px;
-  font-size: 24px;
+  border-color: rgba(62, 60, 60, 0.2);
+  width: 36px;
+  height: 36px;
+  font-size: 20px;
   cursor: pointer;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
@@ -76,6 +77,12 @@ body {
   font-size: 14px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Add shadow */
   white-space: nowrap; /* Prevent text from wrapping */
+}
+
+.tooltip span {
+  text-align: left; /* Left-align each span's content */
+  display: block; /* Ensure each span appears on its own line */
+  margin-bottom: 5px; /* Optional: Add space between spans */
 }
 
 @media (max-width: 600px) {
